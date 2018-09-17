@@ -1,8 +1,8 @@
 mobs:register_mob("dmobs:owl", {
 	type = "animal",
 	passive = true,
-	hp_min = 12,
-	hp_max = 22,
+	hp_min = 4,
+	hp_max = 7,
 	armor = 130,
 	collisionbox = {-0.3, -0.5, -0.3, 0.2, 0.2, 0.2},
 	visual = "mesh",

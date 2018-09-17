@@ -5,8 +5,8 @@ minetest.register_abm({
 	nodenames = {"flowers:flower_rose", "flowers:flower_tulip",
 		"flowers:flower_dandelion_yellow", "flowers:flower_viola",
 		"flowers:flower_dandelion_white", "flowers:flower_geranium"},
-	interval = 10.0,
-	chance = 10,
+	interval = 20.0,
+	chance = 80,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.add_entity({x=pos.x,y=pos.y+0.3,z=pos.z}, "dmobs:butterfly")
 	end

@@ -1,8 +1,8 @@
 mobs:register_mob("dmobs:hedgehog", {
 	type = "animal",
 	passive = true,
-	hp_min = 12,
-	hp_max = 22,
+	hp_min = 4,
+	hp_max = 6,
 	armor = 130,
 	collisionbox = {-0.1, -0.1, -0.2, 0.2, 0.2, 0.2},
 	visual = "mesh",
@@ -23,7 +23,15 @@ mobs:register_mob("dmobs:hedgehog", {
 	fall_damage = 1,
 	fall_speed = -6,
 	fear_height = 4,
-	view_range = 14,
+	view_range = 5,
+        replace_rate = 10,
+        replace_what = {
+                {"group:grass", "air", 0},
+                {"group:flower", "air", 0},
+                {"group:flora", "air", 0},
+       },
+        replace_with = "air",
+
 	follow = {"farming:bread"},
 	animation = {
 		speed_normal = 5,
