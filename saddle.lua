@@ -26,7 +26,7 @@
 
 
 -- saddle (if not already available)
-if not minetest.get_modpath("mobs_horse") then
+if not minetest.get_modpath("mob_horse") then
 	minetest.register_craftitem(":mobs:saddle", {
 		description = "Saddle",
 		inventory_image = "mobs_saddle.png"

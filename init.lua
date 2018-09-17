@@ -9,14 +9,14 @@ dofile(minetest.get_modpath("dmobs").."/api.lua")
 -- Enable dragons (disable to remove tamed dragons and dragon bosses)
 dmobs.dragons = minetest.settings:get_bool("dmobs.dragons")
 if dmobs.dragons == nil then
-dmobs.dragons = true
+dmobs.dragons = false
 end
 dmobs.regulars = minetest.settings:get_bool("dmobs.regulars")
 if dmobs.regulars == nil then
 dmobs.regulars = true
 end
 
-
+dmobs.dragons = false
 -- Enable fireballs/explosions
 dmobs.destructive = minetest.settings:get_bool("dmobs.destructive") or false
 
@@ -52,12 +52,10 @@ end
 
 local mobslist = {
 	-- friendlies
-	"pig",
-	"panda",
+	--"pig",
 	"tortoise",
-	"golem_friendly",
+	--"golem_friendly",
 	"nyan",
-	"gnorm",
 	"hedgehog",
 	"owl",
 	"whale",
@@ -66,15 +64,15 @@ local mobslist = {
 	"elephant",
 
 	-- baddies
-	"pig_evil",
+	-- 	"pig_evil",
 	"fox",
-	"rat",
-	"wasps",
-	"treeman",
-	"golem",
-	"skeleton",
-	"orc",
-	"ogre",
+	-- 	"rat",
+	-- 	"wasps",
+	-- 	"treeman",
+	-- 	"golem",
+	-- 	"skeleton",
+	-- 	"orc",
+	-- 	"ogre",
 }
 
 if dmobs.regulars then
@@ -84,23 +82,6 @@ if dmobs.regulars then
 end
 
 -- dragons!!
-
-if not dmobs.dragons then
-	loadmob("dragon_normal","/dragons/")
-else
-	loadmob("main","/dragons/")
-	loadmob("dragon1","/dragons/")
-	loadmob("dragon2","/dragons/")
-	loadmob("dragon3","/dragons/")
-	loadmob("dragon4","/dragons/")
-	loadmob("great_dragon","/dragons/")
-	loadmob("water_dragon","/dragons/")
-	loadmob("wyvern","/dragons/")
-
-	dofile(minetest.get_modpath("dmobs").."/dragons/eggs.lua")
-end
-dofile(minetest.get_modpath("dmobs").."/arrows/dragonfire.lua")
-dofile(minetest.get_modpath("dmobs").."/arrows/dragonarrows.lua")
 
 -- General arrow definitions
 
@@ -118,3 +99,5 @@ dofile(minetest.get_modpath("dmobs").."/arrows/sting.lua")
 
 dofile(minetest.get_modpath("dmobs").."/spawn.lua")
 dofile(minetest.get_modpath("dmobs").."/saddle.lua")
+
+print ("[MOD]: mobs_dmobs loaded")
